@@ -10,6 +10,8 @@
 package com.atguigu.demo.controller;
 
 import com.atguigu.demo.bean.Person;
+import com.atguigu.demo.remoteService.RemoteService;
+import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,9 +34,9 @@ import java.util.UUID;
 public class MovieController {
 
     @Autowired
-    RestTemplate restTemplate;
+    RemoteService remoteService;
 
-    @RequestMapping("/order")
+    @RequestMapping("/order2")
     public Map<String, Object> order(Integer uId) {
         Map<String, Object> order = new HashMap<>();
 
@@ -50,11 +52,10 @@ public class MovieController {
         // String.class);
         Person person = new Person();
         person.setName("远程调用");
-        ResponseEntity<String> postForEntity = restTemplate.postForEntity("http://DEMO-PROVIDER-ONE/getMovie", person,
-                String.class);
+        String remoteService = this.remoteService.getRemoteService(person);
         // String moviename = restTemplate.getForObject("http://MOVIE-SERVICE/movie",
         // String.class, person);
-        order.put("movie", postForEntity.getBody());
+        order.put("movie", remoteService);
 
         return order;
     }
