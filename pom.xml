@@ -6,15 +6,17 @@
 
     <groupId>com.atguigu.demo</groupId>
     <artifactId>demo-springcloud-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-    </modules>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
+    <modules>
+        <module>demo-eureka</module>
+    </modules>
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.16.RELEASE</version>
+        <version>2.0.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -22,9 +24,29 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-boot.verion>2.0.4.RELEASE</spring-boot.verion>
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+        <project.modules.version>0.0.1-SNAPSHOT</project.modules.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!-- spring-boot parent -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring-boot.verion}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- spring cloud 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
