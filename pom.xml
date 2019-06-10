@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-eureka</module>
+        <module>demo-common</module>
     </modules>
 
 
@@ -47,7 +48,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
