@@ -11,6 +11,11 @@
     <modules>
         <module>demo-eureka</module>
         <module>demo-common</module>
+        <module>demo-provider-2</module>
+        <module>demo-provider-1</module>
+        <module>demo-micro-service-1</module>
+        <module>demo-micro-service-2</module>
+        <module>demo-zuul</module>
     </modules>
 
 
@@ -48,6 +53,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
+
+
+
         </dependencies>
     </dependencyManagement>
 
