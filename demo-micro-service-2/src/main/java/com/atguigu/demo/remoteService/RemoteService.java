@@ -10,6 +10,8 @@
 package com.atguigu.demo.remoteService;
 
 import com.atguigu.demo.bean.Person;
+import com.atguigu.demo.common.DemoHystrix;
+import com.atguigu.demo.common.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @DESCRIPTION : TODO(用一句话描述该类做什么)   
  * @since JDK 1.8
  */
-@FeignClient(name="DEMO-PROVIDER-ONE")
+@FeignClient(name="DEMO-PROVIDER-ONE",configuration = FeignConfig.class,fallback = DemoHystrix.class)
 public interface RemoteService {
 
     @RequestMapping("/getMovie")
