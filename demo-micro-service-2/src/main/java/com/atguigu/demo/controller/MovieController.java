@@ -36,7 +36,7 @@ public class MovieController {
     @Autowired
     RemoteService remoteService;
 
-    @RequestMapping("/order2")
+    @RequestMapping("/order")
     public Map<String, Object> order(Integer uId) {
         Map<String, Object> order = new HashMap<>();
 
@@ -56,7 +56,7 @@ public class MovieController {
         // String moviename = restTemplate.getForObject("http://MOVIE-SERVICE/movie",
         // String.class, person);
         order.put("movie", remoteService);
-
+        System.out.println("服务版本号002");
         return order;
     }
 }

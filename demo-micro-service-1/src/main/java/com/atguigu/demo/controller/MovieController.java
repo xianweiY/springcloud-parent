@@ -55,7 +55,7 @@ public class MovieController {
         // String moviename = restTemplate.getForObject("http://MOVIE-SERVICE/movie",
         // String.class, person);
         order.put("movie", postForEntity.getBody());
-
+        System.out.println("服务版本号001");
         return order;
     }
 }
