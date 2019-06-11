@@ -1,4 +1,4 @@
-springcloud 微服务demo,本demo基于2.0.4进行配置<br/>
+springcloud 微服务demo,基于springboot2.0.4进行配置<br/>
 =======
 demo内容含括<br/>
 ---
