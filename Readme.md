@@ -1,4 +1,7 @@
-springcloud 微服务demo<br/>
+springcloud 微服务demo,本demo基于2.0.4进行配置<br/>
+demo内容含括 1.zuul(负载均衡&服务降级熔断)-->微服务(负载均衡&服务降级熔断)-->微服务<br/>
+            2.Eureka(Security安全策略)<br/>
+            3.RestTemplate调用demo  &  Feign调用demo<br/>
 
 zuul服务网关，提供路由，负载均衡。<br/>
 包括fallback熔断器，filter过滤器<br/>
