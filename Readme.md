@@ -40,4 +40,4 @@ hystrix的配置使用：<br/>
 <br/>
 
 
-[熔断器，监控面板配置参考](https://blog.csdn.net/qq_34310242/article/details/80873966)
+[熔断器，监控面板配置参考链接](https://blog.csdn.net/qq_34310242/article/details/80873966)
