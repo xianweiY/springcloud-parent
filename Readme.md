@@ -13,12 +13,13 @@ zuul服务网关，提供路由，负载均衡。<br/>
             
 -----------  
 
-micro-service  微服务调用者；<br/>
-provider       微服务提供者；<br/>
+micro-service  微服务；<br/>
+provider       微服务；<br/>
+demo里面测试了 micro 微服务调用 provider 微服务，并且配置了熔断器和负载均衡。<br/>
   
 -----
 
-其实无所谓  调用者  和  提供者  ，本质上两者都是微服务，通过controller提供对外接口<br/>
+springcloud其实无所谓  调用者  和  提供者  ，本质上两者都是微服务，通过controller提供对外接口<br/>
 都可以互相调用，只是在本demo中，测试的是micro-service调用provider。<br/>
 
 ------
