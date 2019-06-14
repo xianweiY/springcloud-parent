@@ -13,10 +13,16 @@ zuul服务网关，提供路由，负载均衡。<br/>
             
 -----------  
 
-micro-service  微服务；<br/>
-provider       微服务；<br/>
-demo里面测试了 micro 微服务调用 provider 微服务，并且配置了熔断器和负载均衡。<br/>
-  
+1.micro-service  微服务；<br/>
+2.provider       微服务；<br/>
+3.demo里面测试了 micro 微服务调用 provider 微服务，并且配置了熔断器和负载均衡。<br/>
+4.congif-server  配置中心服务:
+-------
+        在其他微服务引入客户端依赖，配置bootstrap.properties文件，因为此文件加载优先于application.properties
+        指定配置中心服务器以及配置文件。<br>
+        本文中栗子demo为 demo-micro-service-1引用了配置中心的配置。
+   
+   
 -----
 
 springcloud其实无所谓  调用者  和  提供者  ，本质上两者都是微服务，通过controller提供对外接口<br/>
