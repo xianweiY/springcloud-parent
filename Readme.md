@@ -5,6 +5,8 @@ demo内容含括<br/>
             1.zuul(负载均衡&服务降级熔断)-->微服务(负载均衡&服务降级熔断)-->微服务
             2.Eureka(Security安全策略)
             3.RestTemplate调用demo  &  Feign调用demo
+            4.config配置中心
+
             
 ----------------
 
